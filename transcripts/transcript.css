@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #36393f;
+    background-color: #36393f; /* Discord background color */
     color: #ffffff;
     margin: 0;
     padding: 0;
 }
 
 .discord-chat {
-    background-color: #2f3136;
+    background-color: #2f3136; /* Discord chat background */
     border-radius: 8px;
     margin: 20px auto;
     max-width: 800px;
@@ -15,7 +15,7 @@ body {
 }
 
 .chat-header {
-    background-color: #202225;
+    background-color: #202225; /* Discord header background */
     padding: 10px;
     border-radius: 8px 8px 0 0;
     font-weight: bold;
@@ -23,7 +23,14 @@ body {
 }
 
 .channel-name {
-    color: #8e9297;
+    color: #8e9297; /* Discord channel name color */
+    font-size: 1.2em;
+}
+
+.channel-description {
+    color: #72767d; /* Discord description color */
+    font-size: 0.9em;
+    margin-top: 4px;
 }
 
 .messages {
@@ -35,24 +42,78 @@ body {
 }
 
 .author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.username {
     font-weight: bold;
-    color: #7289da;
+    margin-right: 8px;
 }
 
 .timestamp {
-    color: #72767d;
-    font-size: 0.9em;
-    margin-left: 10px;
+    color: #72767d; /* Discord timestamp color */
+    font-size: 0.8em;
 }
 
 .content {
-    margin-top: 5px;
-    color: #dcddde;
+    margin-left: 40px; /* Align with avatar */
+    color: #dcddde; /* Discord message text color */
 }
 
 .mention {
-    color: #7289da;
+    color: #7289da; /* Discord mention color */
     background-color: rgba(114, 137, 218, 0.1);
     padding: 2px 4px;
     border-radius: 3px;
+}
+
+.embeds {
+    margin-left: 40px; /* Align with avatar */
+}
+
+.embed {
+    background-color: #2f3136; /* Discord embed background */
+    border-left: 4px solid #5865f2; /* Embed accent color */
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 8px;
+}
+
+.embed-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.embed-description {
+    color: #dcddde;
+    margin-bottom: 8px;
+}
+
+.embed-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.embed-field {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-name {
+    font-weight: bold;
+    color: #dcddde;
+}
+
+.field-value {
+    color: #dcddde;
 }

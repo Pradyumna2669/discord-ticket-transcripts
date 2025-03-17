@@ -1,37 +1,58 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #36393f; /* Discord-like background */
-    color: #ffffff; /* Discord-like text color */
+    background-color: #36393f;
+    color: #ffffff;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
-h1 {
+.discord-chat {
+    background-color: #2f3136;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px;
+}
+
+.chat-header {
+    background-color: #202225;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
     color: #ffffff;
-    text-align: center;
-    margin-bottom: 20px;
+}
+
+.channel-name {
+    color: #8e9297;
+}
+
+.messages {
+    padding: 10px;
 }
 
 .message {
-    background-color: #2f3136; /* Discord message background */
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
 }
 
 .author {
     font-weight: bold;
-    color: #7289da; /* Discord-like author color */
+    color: #7289da;
 }
 
 .timestamp {
-    color: #72767d; /* Discord-like timestamp color */
+    color: #72767d;
     font-size: 0.9em;
     margin-left: 10px;
 }
 
 .content {
     margin-top: 5px;
-    color: #dcddde; /* Discord-like message text color */
+    color: #dcddde;
+}
+
+.mention {
+    color: #7289da;
+    background-color: rgba(114, 137, 218, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
 }

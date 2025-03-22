@@ -1,119 +1,156 @@
+/* General Reset */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #36393f; /* Discord background color */
-    color: #ffffff;
     margin: 0;
     padding: 0;
+    font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #36393f;
+    color: #dcddde;
 }
 
+/* Discord Chat Container */
 .discord-chat {
-    background-color: #2f3136; /* Discord chat background */
-    border-radius: 8px;
-    margin: 20px auto;
     max-width: 800px;
-    padding: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #36393f;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Chat Header */
 .chat-header {
-    background-color: #202225; /* Discord header background */
-    padding: 10px;
-    border-radius: 8px 8px 0 0;
-    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2f3136;
+}
+
+.chat-header .channel-name {
+    font-size: 16px;
+    font-weight: 600;
     color: #ffffff;
 }
 
-.channel-name {
-    color: #8e9297; /* Discord channel name color */
-    font-size: 1.2em;
+.chat-header .channel-description {
+    font-size: 14px;
+    color: #8e9297;
 }
 
-.channel-description {
-    color: #72767d; /* Discord description color */
-    font-size: 0.9em;
-    margin-top: 4px;
-}
-
+/* Messages Container */
 .messages {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+/* Individual Message */
 .message {
-    margin-bottom: 15px;
+    display: flex;
+    gap: 16px;
 }
 
-.author {
+/* Author Section */
+.message .author {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    gap: 8px;
 }
 
-.avatar {
-    width: 32px;
-    height: 32px;
+.message .author .avatar {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    margin-right: 8px;
 }
 
-.username {
-    font-weight: bold;
-    margin-right: 8px;
+.message .author .username {
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.timestamp {
-    color: #72767d; /* Discord timestamp color */
-    font-size: 0.8em;
+.message .author .timestamp {
+    font-size: 12px;
+    color: #72767d;
 }
 
-.content {
-    margin-left: 40px; /* Align with avatar */
-    color: #dcddde; /* Discord message text color */
+/* Message Content */
+.message .content {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #dcddde;
 }
 
-.mention {
-    color: #7289da; /* Discord mention color */
-    background-color: rgba(114, 137, 218, 0.1);
-    padding: 2px 4px;
-    border-radius: 3px;
-}
-
-.embeds {
-    margin-left: 40px; /* Align with avatar */
-}
-
-.embed {
-    background-color: #2f3136; /* Discord embed background */
-    border-left: 4px solid #5865f2; /* Embed accent color */
-    border-radius: 4px;
-    padding: 8px;
+/* Embeds */
+.message .embeds {
     margin-top: 8px;
 }
 
-.embed-title {
-    font-weight: bold;
+.message .embeds .embed {
+    display: flex;
+    background-color: #2f3136;
+    border-radius: 4px;
+    border-left: 4px solid #5865f2;
+    padding: 8px;
+}
+
+.message .embeds .embed-color {
+    width: 4px;
+    background-color: #5865f2;
+    border-radius: 2px 0 0 2px;
+}
+
+.message .embeds .embed-content {
+    flex: 1;
+    padding-left: 8px;
+}
+
+.message .embeds .embed-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
     margin-bottom: 4px;
 }
 
-.embed-description {
+.message .embeds .embed-description {
+    font-size: 14px;
     color: #dcddde;
     margin-bottom: 8px;
 }
 
-.embed-fields {
+.message .embeds .embed-fields {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.embed-field {
+.message .embeds .embed-field {
     display: flex;
-    justify-content: space-between;
+    gap: 8px;
 }
 
-.field-name {
-    font-weight: bold;
+.message .embeds .embed-field .field-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.message .embeds .embed-field .field-value {
+    font-size: 14px;
     color: #dcddde;
 }
 
-.field-value {
-    color: #dcddde;
+/* Scrollbar Styling (Optional) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2f3136;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #202225;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1a1b1e;
 }
